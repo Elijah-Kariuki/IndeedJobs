@@ -1,0 +1,38 @@
+﻿@model Job
+
+<h3>@Model.Position Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Company Logo </th>
+        <th>Company Name</th>
+        <th>Company Rating</th>
+        <th>Company Review Link</th>
+        <th>Company Reviews</th>
+        <th>Date</th>
+        <th>Job Location</th>
+        <th>Job Title</th>
+        <th>Job Url</th>
+        <th>Multiple Hiring</th>
+        <th>Urgently Hiring</th>
+        <th>Salary</th>
+    </tr>
+
+    <tr>
+        <td>
+            <img src="@Model.CompanyLogoUrl" alt="Company Logo" width="100" height="100" />
+        </td>
+        <td>@Model.CompanyName</td>
+        <td>@Model.CompanyRating</td>
+        <td>@Model.CompanyReviewLink</td>
+        <td>@Model.CompanyReviews</td>
+        <td>@Model.Date</td>
+        <td>@Model.JobLocation</td>
+        <td>@Model.JobTitle</td>
+        <td>@Model.JobUrl</td>
+        <td>@Model.MultipleHiring</td>
+        <td>@Model.UrgentlyHiring</td>
+        <td>@Model.Salary</td>
+    </tr>
+    
+</table>

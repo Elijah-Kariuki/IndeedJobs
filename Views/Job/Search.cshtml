@@ -1,0 +1,59 @@
+﻿@model IndeedJobs.Models.JobViewModel
+
+@{
+    ViewData["Title"] = "Jobs";
+}
+
+<h2>Job Search</h2>
+
+<form method="get" action="@Url.Action("SearchJobs", "Job")">
+    <div>
+        <label for="keyword">Keyword:</label>
+        <input type="text" id="keyword" name="keyword" value="@Model.Keyword" />
+    </div>
+    <div>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="@Model.Location" />
+    </div>
+    <div>
+        <button type="submit">Search</button>
+    </div>
+</form>
+
+<h2>Jobs</h2>
+<table class="table">
+    <tr>
+        <th>Company Logo </th>
+        <th>Company Name</th>
+        <th>Company Rating</th>
+        <th>Company Review Link</th>
+        <th>Company Reviews</th>
+        <th>Date</th>
+        <th>Job Location</th>
+        <th>Job Title</th>
+        <th>Job Url</th>
+        <th>Multiple Hiring</th>
+        <th>Urgently Hiring</th>
+        <th>Salary</th>
+    </tr>
+
+    @foreach (var item in Model.Results)
+    {
+        <tr>
+            <td>
+                <img src="@item.CompanyLogoUrl" alt="Company Logo" width="100" height="100" />
+            </td>
+            <td>@item.CompanyName</td>
+            <td>@item.CompanyRating</td>
+            <td>@item.CompanyReviewLink</td>
+            <td>@item.CompanyReviews</td>
+            <td>@item.Date</td>
+            <td>@item.JobLocation</td>
+            <td>@item.JobTitle</td>
+            <td>@item.JobUrl</td>
+            <td>@item.MultipleHiring</td>
+            <td>@item.UrgentlyHiring</td>
+            <td>@item.Salary</td>
+        </tr>
+    }
+</table>

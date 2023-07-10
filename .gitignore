@@ -12,7 +12,7 @@
 *appsettings.json
 *appsettings.Development.json
 *appsettings.Production.json
-*Dockerfile
+*secrets.json
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)

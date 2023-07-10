@@ -1,18 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace IndeedJobs.Models
+﻿namespace IndeedJobs.Models
 {
-    public class Job
+    public class JobViewModel
     {
-        public Job()
-        {
-        }
-        [Key]
-        public int Position { get; set; }
         public string CompanyLogoUrl { get; set; }
         public string CompanyName { get; set; }
         public string CompanyRating { get; set; }
@@ -23,10 +12,10 @@ namespace IndeedJobs.Models
         public string JobTitle { get; set; }
         public string JobUrl { get; set; }
         public string MultipleHiring { get; set; }
-        public bool NextPage { get; set; }
-        public int PageNumber { get; set; }
         public string Salary { get; set; }
         public string UrgentlyHiring { get; set; }
-
+        public IEnumerable<Job> Results { get; set; }
+        public string Keyword { get; set; }
+        public string Location { get; set; }
     }
 }
